@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-slidein {
+    animation: slidein 0.32s cubic-bezier(.5,1.8,.5,1);
+  }
+  @keyframes slidein {
+    from { transform: translateX(-100px); opacity: 0; }
+    to   { transform: none; opacity: 1;}
+  }
+}
+
+/* Hide scrollbars for clean modals */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
