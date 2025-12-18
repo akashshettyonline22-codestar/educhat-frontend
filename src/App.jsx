@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import DashboardLayout from "./layouts/DashboardLayout";
 import HomePage from "./pages/HomePage";
 import AuthPage from "./pages/AuthPage";
@@ -7,8 +7,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ErrorProvider, useError } from "./contexts/ErrorContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-// Top-level component to display global error messages.
-// Put this in a separate file if you want to reuse elsewhere.
+// Top-level component to display global error messages
 function GlobalNotificationBanner() {
   const { error, success, clearError, clearSuccess } = useError();
 
@@ -62,10 +61,13 @@ function GlobalNotificationBanner() {
 function AppRoutes() {
   return (
     <Routes>
-      {/* Public route */}
+      {/* Default route - redirect to /auth */}
+      <Route path="/" element={<Navigate to="/auth" replace />} />
+
+      {/* Public route - Only auth page */}
       <Route path="/auth" element={<AuthPage />} />
 
-      {/* Protected routes */}
+      {/* All other routes are protected */}
       <Route
         element={
           <ProtectedRoute>
@@ -75,7 +77,14 @@ function AppRoutes() {
       >
         <Route path="/home" element={<HomePage />} />
         <Route path="/bots" element={<BotsLanding />} />
-        {/* You can add other protected routes here */}
+        
+        {/* Add more protected routes here as needed */}
+        {/* <Route path="/analytics" element={<AnalyticsPage />} /> */}
+        {/* <Route path="/users" element={<UsersPage />} /> */}
+        {/* <Route path="/settings" element={<SettingsPage />} /> */}
+        
+        {/* Catch-all for undefined protected routes - redirect to home */}
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Route>
     </Routes>
   );
@@ -86,7 +95,7 @@ function App() {
     <ErrorProvider>
       <AuthProvider>
         <BrowserRouter>
-          {/* Global Error Banner (shows up for any error set in ErrorContext) */}
+          {/* Global Error/Success Banner */}
           <GlobalNotificationBanner />
 
           {/* All app routes */}

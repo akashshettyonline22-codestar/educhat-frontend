@@ -74,6 +74,8 @@ export default function AddBotModal({ show, onClose, onSuccess }) {
       resetForm();
       onClose();
     } catch (err) {
+      resetForm();
+      onClose();
       console.log(err)
       setError(err.message || "Failed to create bot");
     } finally {

@@ -1,4 +1,4 @@
-import { apiPost, apiGet } from '../utils/apiFetch';
+import { apiPost, apiGet ,apiDelete } from '../utils/apiFetch';
 
 class BotService {
   // Create a new bot
@@ -40,6 +40,16 @@ class BotService {
       throw error;
     }
   }
+
+   async deleteBot(botId) {
+    try {
+      return await apiDelete(`/bots/${botId}`);
+    } catch (error) {
+      console.error('Delete bot error:', error);
+      throw error;
+    }
+  }
+
 }
 
 export default new BotService();
