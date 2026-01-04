@@ -7,6 +7,7 @@ export default function HomePage() {
   const [analytics, setAnalytics] = useState(null);
   const [recentBots, setRecentBots] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [userName,setUserName]=useState(null)
   const { setError } = useError();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function HomePage() {
       setLoading(true);
       const data = await analyticsService.getAnalytics();
       console.log('Analytics data:', data);
+      setUserName(data.user_name)
       
       setAnalytics(data.analytics);
       setRecentBots(data.recent_bots || []);
@@ -45,7 +47,7 @@ export default function HomePage() {
     <div className="max-w-7xl mx-auto pb-8">
       {/* Welcome Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-extrabold text-indigo-700 mb-2">Welcome, Admin! 👋</h1>
+        <h1 className="text-3xl font-extrabold text-indigo-700 mb-2">Welcome {userName} 👋</h1>
         <p className="text-gray-500 text-lg">Here's a quick look at your EduChat system performance.</p>
       </div>
 
