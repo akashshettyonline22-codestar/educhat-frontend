@@ -159,7 +159,7 @@ Serve Production Build
 📁 Project Structure
 
    
-   src/
+src/
 ├── components/
 │   ├── Bots/
 │   │   └── BotHome.jsx              # Main bots landing page
@@ -192,7 +192,6 @@ Serve Production Build
 │
 ├── App.jsx                          # Main app with routing
 └── index.js                         # Entry point
-
 
 🔗 API Integration
 API Client
