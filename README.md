@@ -160,38 +160,40 @@ Serve Production Build
 
    
 src/
+│
 ├── components/
-│   ├── Bots/
-│   │   └── BotHome.jsx              # Main bots landing page
-│   ├── AddEditBotModal.jsx          # Modal for creating bots
-│   ├── ChatModal.jsx                # Real-time chat interface
-│   └── ProtectedRoute.jsx           # Route guard component
+│ ├── Bots/
+│ │ └── BotHome.jsx # Main bots landing page
+│ ├── AddEditBotModal.jsx # Modal for creating bots
+│ ├── ChatModal.jsx # Real-time chat interface
+│ └── ProtectedRoute.jsx # Route guard component
 │
 ├── contexts/
-│   ├── AuthContext.jsx              # Authentication state
-│   └── ErrorContext.jsx             # Global notifications
+│ ├── AuthContext.jsx # Authentication state management
+│ └── ErrorContext.jsx # Global error/success notifications
 │
 ├── layouts/
-│   └── DashboardLayout.jsx          # Main layout with sidebar
+│ └── DashboardLayout.jsx # Main dashboard layout with sidebar
 │
 ├── pages/
-│   ├── AuthPage.jsx                 # Login/Register page
-│   └── HomePage.jsx                 # Dashboard home
+│ ├── AuthPage.jsx # Login/Register page
+│ └── HomePage.jsx # Dashboard home with analytics
 │
 ├── services/
-│   ├── authService.js               # Auth API calls
-│   ├── botService.js                # Bot CRUD operations
-│   ├── analyticsService.js          # Analytics API
-│   └── socketService.js             # WebSocket management
+│ ├── authService.js # Authentication API calls
+│ ├── botService.js # Bot CRUD operations
+│ ├── analyticsService.js # Analytics API calls
+│ └── socketService.js # WebSocket management
 │
 ├── utils/
-│   └── apiClient.js                 # Centralized API client
+│ └── apiClient.js # Centralized API client with auth
 │
 ├── config/
-│   └── env.js                       # Environment config
+│ └── env.js # Environment configuration
 │
-├── App.jsx                          # Main app with routing
-└── index.js                         # Entry point
+├── App.jsx # Main app component with routing
+├── index.js # App entry point
+└── index.css # Global styles
 
 🔗 API Integration
 API Client
