@@ -1,3 +1,4 @@
+<img width="318" height="806" alt="image" src="https://github.com/user-attachments/assets/8180dbed-5ec8-4e7d-9ecb-0f29f22c2095" />
 EduChat Frontend 🎓🤖
 A modern React-based educational chatbot platform that allows users to create AI-powered tutors by uploading textbooks and interacting with them in real-time.
 
