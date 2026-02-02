@@ -1,4 +1,4 @@
-<img width="318" height="806" alt="image" src="https://github.com/user-attachments/assets/8180dbed-5ec8-4e7d-9ecb-0f29f22c2095" />
+
 EduChat Frontend 🎓🤖
 A modern React-based educational chatbot platform that allows users to create AI-powered tutors by uploading textbooks and interacting with them in real-time.
 
@@ -159,42 +159,7 @@ Serve Production Build
 
 📁 Project Structure
 
-   
-src/
-│
-├── components/
-│ ├── Bots/
-│ │ └── BotHome.jsx # Main bots landing page
-│ ├── AddEditBotModal.jsx # Modal for creating bots
-│ ├── ChatModal.jsx # Real-time chat interface
-│ └── ProtectedRoute.jsx # Route guard component
-│
-├── contexts/
-│ ├── AuthContext.jsx # Authentication state management
-│ └── ErrorContext.jsx # Global error/success notifications
-│
-├── layouts/
-│ └── DashboardLayout.jsx # Main dashboard layout with sidebar
-│
-├── pages/
-│ ├── AuthPage.jsx # Login/Register page
-│ └── HomePage.jsx # Dashboard home with analytics
-│
-├── services/
-│ ├── authService.js # Authentication API calls
-│ ├── botService.js # Bot CRUD operations
-│ ├── analyticsService.js # Analytics API calls
-│ └── socketService.js # WebSocket management
-│
-├── utils/
-│ └── apiClient.js # Centralized API client with auth
-│
-├── config/
-│ └── env.js # Environment configuration
-│
-├── App.jsx # Main app component with routing
-├── index.js # App entry point
-└── index.css # Global styles
+   <img width="318" height="806" alt="image" src="https://github.com/user-attachments/assets/8180dbed-5ec8-4e7d-9ecb-0f29f22c2095" />
 
 🔗 API Integration
 API Client
